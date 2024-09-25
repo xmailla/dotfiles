@@ -53,3 +53,8 @@ then use GNU stow to create symlinks
 ```
 $ stow --dotfiles .
 ```
+
+or simply use
+```
+make all
+```
