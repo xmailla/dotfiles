@@ -1,0 +1,9 @@
+Local-Mailbox: "Xavier Maillard" <x@maillard.im>
+FQDN: lamaison.localdomain
+Outbox: /Users/x/mail/Postés
+Sendmail: /opt/pkg/bin/msmtp
+Scan-Format: "%c%u%r %-3n    %10d     %17f %t %2i%s"
+
+
+MaildirBase: /Users/x/mail
+InboxName: Reception
