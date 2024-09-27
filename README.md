@@ -58,3 +58,10 @@ or simply use
 ```
 make all
 ```
+
+## Fonts installation on MacOS
+
+fontconfig wouldn't find fonts after ```pkgin install <font>```, you have to either copy it into, as you prefer:
+-```$HOME/Library/Fonts```
+- ```/Library/Fonts/pkgsrc/``` 
+
