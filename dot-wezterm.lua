@@ -54,4 +54,77 @@ config.keys = {
   },
 }
 
+config.send_composed_key_when_left_alt_is_pressed = true
+config.send_composed_key_when_right_alt_is_pressed = false
+
+config.keys = {
+	-- Move between windows
+	{
+		key = "f",
+		mods = "CTRL|CMD",
+		action = wezterm.action.ToggleFullScreen,
+	},
+}
+
+
+config.colors = {
+  background = "#000000",
+  foreground = "#ffa028",
+  cursor_bg = "#ffa028",
+  cursor_border = "#ffa028",
+  cursor_fg = "#000000",
+  selection_bg = "#ffa028",
+  selection_fg = "#000000",
+
+  ansi = {"#000000","#FF3428","#f6fe11","#c2a86c","#7a4f17","#7a4f17","#ffa028","#ffa028"},
+  brights = {"#666666","#feba11","#777777","#feba11","#feba11","#feba11","#ffa028","#ffa028"}
+}
+
+-- Font
+config.font = wezterm.font("Mononoki Nerd Font Mono")
+config.font_size = 13
+config.bold_brightens_ansi_colors = true
+config.cell_width = 1.1
+config.line_height = 1.5
+
+-- Terminal features
+config.enable_tab_bar = true
+config.use_fancy_tab_bar = false
+
+config.window_decorations = "RESIZE"
+config.window_background_opacity = 1
+
+config.window_close_confirmation = 'NeverPrompt'
+
+-- Key bindings
+local act = wezterm.action
+
+config.keys = {
+  {
+    key = 'k',
+    mods = 'CMD',
+    action = act.Multiple {
+      act.ClearScrollback 'ScrollbackOnly',
+      act.SendKey { key = 'L', mods = 'CTRL' },
+    }    
+  }
+}
+
+config.default_cursor_style = "BlinkingBlock"
+config.cursor_blink_rate = 800
+
+local keys = require("keys")
+local fonts = require("fonts")
+
+-- local tabline = require("plugins.tabline")
+-- local smartsplits = require("plugins.smart-splits")
+-- local workspaceswitcher = require("plugins.workspace-switcher")
+
+keys.setup(config)
+fonts.setup(config)
+-- tabline.setup()
+-- smartsplits.setup(config)
+-- workspaceswitcher.setup(config)
+
 return config
+
