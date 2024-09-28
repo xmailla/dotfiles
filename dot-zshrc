@@ -63,15 +63,11 @@ eval "$(zoxide init --cmd cd zsh)"
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 
-# --- setup fzf theme ---
-fg="#CBE0F0"
-bg="#011628"
-bg_highlight="#143652"
-purple="#B388FF"
-blue="#06BCE4"
-cyan="#2CF9ED"
-
-export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --color=fg:-1,fg+:#d0d0d0,bg:-1,bg+:#262626
+  --color=hl:#d98013,hl+:#5fd7ff,info:#afaf87,marker:#87ff00
+  --color=prompt:#7a4f17,spinner:#af5fff,pointer:#af5fff,header:#87afaf
+  --color=border:#262626,label:#aeaeae,query:#d9d9d9'
 
 # -- Use fd instead of fzf --
 
@@ -122,8 +118,5 @@ export BAT_THEME=tokyonight_night
 # eval $(thefuck --alias fk)
 
 # Aliases
-#alias ls='ls --color'
 alias ls="eza --icons=always"
-#alias z='zoxide'
-#alias cd='z'
 
