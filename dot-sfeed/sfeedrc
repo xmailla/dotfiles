@@ -1,0 +1,74 @@
+# for more details see the sfeedrc(5) and sfeed_update(1) man pages
+# and the README file.
+
+sfeedpath="$HOME/.local/share/feeds"
+
+# list of feeds to fetch:
+feeds() {
+	feed "DLFP news" "https://linuxfr.org/news.atom"
+	feed "DLFP journaux" "https://linuxfr.org/journaux.atom"
+	feed "Joseph Choe" "https://josephchoe.com/feed.xml"
+	feed "Radio Nova - Chronique Meurice" "https://podcasts.nova.fr/radio-nova-la-chronique-de-guillaume-meurice"
+
+	# Echecs
+	feed "FFE YT" "https://www.youtube.com/feeds/videos.xml?channel_id=UCn6wdVs-gSmZBJXSAWPzf7Q"
+	
+	# Atari
+	feed "8Bit youtube" "https://www.youtube.com/feeds/videos.xml?channel_id=UCpon_anEIMQ-pPLDskYsSvQ"
+
+	# Hack
+	feed "Hackistan" "https://haqistan.net/haqistan.rss"
+	feed "Codemaness" "https://codemadness.org/feeds.html"
+	feed "Suckless" "https://suckless.org/atom.xml"
+	
+	feed 'Ploum.net' 'https://ploum.net/atom.xml'
+	feed 'LinuxFr.org : les dépêches' 'https://linuxfr.org/news.atom'
+	feed 'LinuxFr.org : les journaux' 'https://linuxfr.org/journaux.atom'
+	feed 'LinuxFr.org : les liens' 'https://linuxfr.org/liens.atom'
+	feed 'LinuxFr.org : les forums' 'https://linuxfr.org/forums.atom'
+	feed 'Lichess'\''s Blog' 'https://lichess.org/blog.atom'
+	feed 'Lichess community blogs' 'https://lichess.org/blog/community.atom'
+	feed 'SlackBuilds.org ChangeLog' 'https://slackbuilds.org/rss/ChangeLog.rss'
+	feed 'Les Kassos' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCv88958LRDfndKV_Y7XmAnA'
+	feed 'Luke Smith'\''s Webpage on Luke'\''s Webpage' 'https://lukesmith.xyz/rss.xml'
+	feed 'Luke Smith (Videos)' 'https://videos.lukesmith.xyz/feeds/videos.xml?videoChannelId=2'
+	feed 'Luke Smith (YouTube)' 'https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA'
+	feed 'LindyPress.net' 'https://lindypress.net/rss'
+	feed 'Not Related! A Big-Braned Podcast' 'https://notrelated.xyz/rss'
+	feed 'LandChad.net' 'https://landchad.net/rss.xml'
+	feed 'Based Cooking' 'https://based.cooking/index.xml'
+	feed 'LARBS dotfiles' 'https://github.com/LukeSmithxyz/voidrice/commits/master.atom'
+	feed 'Recent Commits to dwm:master' 'https://github.com/LukeSmithxyz/dwm/commits/master.atom'
+	feed 'Recent Commits to sbopkg:master' 'https://github.com/sbopkg/sbopkg/commits/master.atom'
+	feed 'SlackBuilds.org ChangeLog' 'https://slackbuilds.org/rss/ChangeLog.rss'
+	feed 'Slackbuilds commits' 'https://git.slackbuilds.org/slackbuilds'
+	feed 'Ratfactor Feed' 'https://ratfactor.com/atom.xml'
+	feed 'dwm: suckless'\''s Window Manager' 'https://www.youtube.com/feeds/videos.xml?playlist_id=PL-p5XmQHB_JSrWHdm-Fb5khZpw2JXLImj'
+	feed 'Bash, Shell and UNIX Chaddery' 'https://www.youtube.com/feeds/videos.xml?playlist_id=PL-p5XmQHB_JREOtBfLdKSswBGYyXwXMUy'
+	feed 'Terminal Programs' 'https://www.youtube.com/feeds/videos.xml?playlist_id=PL-p5XmQHB_JSjgaGQdMPNm3jKVjaMkxSp'
+	feed 'vim Hacking' 'https://www.youtube.com/feeds/videos.xml?playlist_id=PL-p5XmQHB_JSTaEPygu1DZjuFfb704Uv7'
+	feed 'Minimalist Software and Sucking Less' 'https://www.youtube.com/feeds/videos.xml?playlist_id=PL-p5XmQHB_JSGspRPnWbjQ2oZzq3ol-32'
+	feed 'Basic Guide to the Terminal' 'https://www.youtube.com/feeds/videos.xml?playlist_id=PL-p5XmQHB_JQ5YQYI7zI1uVSepG-0UPL-'
+	feed 'OldTechBloke' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCCIHOP7e271SIumQgyl6XBQ'
+	feed 'Chess Lifestyle' 'https://www.youtube.com/feeds/videos.xml?channel_id=UC5XifPMOUhsRWPNqkV3W8RA'
+	feed 'Chinois Tips' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCg2cdo65qscE17MeNl78UTw'
+	feed 'Châlons et son Agglo' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCJ-lNdTBFPx_5GAJFGpxPNQ'
+	feed 'Nicolas Gatien' 'https://www.youtube.com/feeds/videos.xml?channel_id=UC5HFlcbkjmUAGBO6Uc4Jayw'
+	feed 'unnamed' 'https://www.youtube.com/feed/channels'
+	feed 'Echecs - Blitzstream' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCcXH6W9ey_h8LEx2lFxp5fg'
+	feed 'Progresser aux échecs avec Marc Quenehen' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCwBtfnsZ-z5d0kCY1_szv-Q'
+	feed 'Echecs - Sylvain Ravot' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCLgx_5JMVp50yP_3K4CSR2g'
+	feed 'Everbook' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCNH5q45xLYx_spiIHlkoyGQ'
+	feed 'Fouloscopie' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCLXDNUOO3EQ80VmD9nQBHPg'
+	feed 'La Pâte de Dom' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCxn_k8C4aSDej21NpEw__Ow'
+	feed 'La stratégie aux échecs' 'https://www.youtube.com/feeds/videos.xml?channel_id=UC0muqv2rF6gR2blajBGvQmA'
+	feed 'La Tronche en Biais' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCq-8pBMM3I40QlrhM9ExXJQ'
+	feed 'Le Petit Astronome' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCyeoIdJHgQhOrct9mVJ2fTQ'
+	feed 'Les secrets de Muriel' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCe5wY6AyIMPiGImd9ef0VSg'
+	feed 'Lidl Cuisine' 'https://www.youtube.com/feeds/videos.xml?channel_id=UC_U6JIIKD3TOwM1LYcAvMdQ'
+	feed 'Major Mouvement' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCsnRkRtbTyISkfGTGwM7VfQ'
+	feed 'Meilleur du chef' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCMzECvsMIHcSjomZYRpJgtw'
+	feed 'Conticini' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCoxH1l3e4kKX3-aY6DHAgaQ'
+	feed 'Scott SCHEPPER' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCnvMBVMXMPKA4Lmy5Ihd-FQ'
+	feed 'unnamed' 'https://www.youtube.com/playlist?list=PL98VsD-AiptchB1QvonVuMopKLisGFNEs'
+}
