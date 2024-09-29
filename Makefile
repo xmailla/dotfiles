@@ -12,6 +12,10 @@ TARGETS := all brew-bundle brew-install clean docker-build docker-shell docker-s
 
 all: help
 
+macos: ## Pre install MacOS settings
+	source dot-macos
+	$(info ==> prepared MacOS settings)
+
 install: ## Install dotfiles
 	stow --verbose=1 --target=$$HOME --dotfiles .
 
