@@ -130,7 +130,7 @@ alias repair_permissions='sudo /usr/libexec/repair_packages --repair --standard-
 alias flush_fonts='atsutil databases -removeUser && atsutil server -shutdown && atsutil server -ping' # Vide le cache des polices
 alias show_files='defaults write com.apple.finder AppleShowAllFiles true' # Affiche les fichiers cachés
 alias hide_files='defaults write com.apple.finder AppleShowAllFiles false' # Masque les fichiers cachés
-alias eject_all='osascript -e 'tell application "Finder" to eject (every disk whose ejectable is true)'' # Ejecte tous les volumes externes 
+#alias eject_all="osascript -e 'tell application "Finder" to eject (every disk whose ejectable is true)'" # Ejecte tous les volumes externes 
 alias battery='pmset -g batt | egrep "([0-9]+\%).*" -o' # Avoir des infos sur ma batterie
 alias eject='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend' # Lockscreen
 
