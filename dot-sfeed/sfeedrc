@@ -71,4 +71,13 @@ feeds() {
 	feed 'Conticini' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCoxH1l3e4kKX3-aY6DHAgaQ'
 	feed 'Scott SCHEPPER' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCnvMBVMXMPKA4Lmy5Ihd-FQ'
 	feed 'unnamed' 'https://www.youtube.com/playlist?list=PL98VsD-AiptchB1QvonVuMopKLisGFNEs'
+
+	# Sport
+	feed "DLTC" "https://feeds.audiomeans.fr/feed/f16e2818-c652-4fa2-ab65-2f81cf8331bc.xml"
+	
+	# Bujo
+	feed "Bullet Journal yt" "https://www.youtube.com/feeds/videos.xml?channel_id=UCt3B6rUXb__X2eMyY7jzgIg"
+
+	# Emacs
+	feed "Sacha Chua" "https://sachachua.com/blog/feed"
 }
